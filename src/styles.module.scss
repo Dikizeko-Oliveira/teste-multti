@@ -1,0 +1,279 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 6rem);
+  background: var(--gray-100);
+  padding: 1rem;
+}
+
+.content {
+  width: 100%;
+  height: calc(100vh - 7rem);
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.goBackButton {
+  text-decoration: none;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-left: auto;
+    margin-right: 0.875rem;
+  }
+}
+
+.subContainer {
+  padding: 4rem;
+}
+
+.searchContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  form {
+    display: flex;
+    align-items: flex-end;
+
+    label {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label + label {
+      margin-left: 1.5rem;
+    }
+
+    input,
+    select {
+      height: 3rem;
+      padding: 10px;
+      color: var(--red);
+      border: none;
+
+      &::placeholder {
+        color: var(--red);
+      }
+    }
+
+    select {
+      margin: 0 1.5rem;
+      background-color: var(--red);
+      color: var(--white);
+    }
+
+    input[type="date"],
+    select {
+      width: 11rem;
+      border-radius: 20px;
+      border: 1px solid var(--red);
+      border-color: var(--red);
+    }
+
+    input[type="date"] {
+      margin-top: 5px;
+    }
+
+    .inputSearch {
+      width: 15rem;
+      border-radius: 20px;
+      border: 1px solid var(--red);
+      border-color: var(--red);
+      display: flex;
+      align-items: center;
+      padding: 5px 10px;
+      height: 3rem;
+
+      .icon {
+        color: var(--red);
+      }
+
+      input[type="text"] {
+        flex: 1;
+        height: 2rem;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.description {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.tabs {
+  width: 100%;
+  margin-top: 2rem;
+  border-bottom: 1px solid var(--gray-200);
+
+  button {
+    background: none;
+    border: none;
+    padding-bottom: 10px;
+    transition: color 0.2s;
+
+    &.active,
+    &:hover {
+      border-bottom: 5px solid var(--red);
+      color: var(--red);
+    }
+  }
+
+  button + button {
+    margin-left: 3rem;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  margin-top: 2rem;
+
+  thead {
+    th {
+      padding: 1rem 1rem 2rem 1rem;
+
+      svg {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  th {
+    text-align: left;
+  }
+
+  tbody {
+    tr {
+      td {
+        padding: 1rem;
+        border-top: 1px solid var(--gray-100);
+        border-bottom: 1px solid var(--gray-100);
+        text-align: left;
+
+        &:first-child {
+          border-left: 1px solid var(--gray-100);
+          border-bottom-left-radius: 10px;
+          border-top-left-radius: 10px;
+        }
+        &:last-child {
+          border-right: 1px solid var(--gray-100);
+          border-bottom-right-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+
+        &.Pago {
+          color: var(--green);
+        }
+        &.Atrasado {
+          color: var(--red);
+        }
+      }
+
+      .options {
+        span {
+          svg + svg {
+            margin-left: 1rem;
+          }
+
+          svg {
+            cursor: pointer;
+            transition: color 0.2s;
+
+            &:hover {
+              color: var(--red);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.summary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+
+  h4 + h4 {
+    margin-left: 10rem;
+  }
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+
+  select {
+    width: 11rem;
+    height: 3rem;
+    border: 1px solid var(--red);
+    border-radius: 15px;
+    padding: 0.875rem;
+    color: var(--red);
+  }
+
+  h5 {
+    color: var(--red);
+  }
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--gray-200);
+    border-radius: 15px;
+    padding: 0 10px;
+    height: 3rem;
+
+    svg {
+      color: var(--red);
+      cursor: pointer;
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+
+    button {
+      border: none;
+      background: none;
+      padding: 10px;
+      height: 3rem;
+      width: 3rem;
+      transition: all 0.2s;
+
+      &.first {
+        border-left: 1px solid var(--gray-200);
+        // margin-left: 10px;
+      }
+
+      &.last {
+        border-right: 1px solid var(--gray-200);
+        // margin-right: 10px;
+      }
+
+      &.active,
+      &:hover {
+        background: var(--red);
+        color: var(--white);
+      }
+    }
+
+    button + button {
+      border-left: 1px solid var(--gray-200);
+    }
+  }
+}
